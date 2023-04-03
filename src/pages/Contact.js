@@ -1,0 +1,44 @@
+import React from "react";
+
+import imgBG2 from "../images/florian-krumm-euZ2n8dGUcQ-unsplash.jpg";
+import Twitter from "../components/Twitter";
+import Credits from "../components/Credits";
+
+const imgStyle = {
+  backgroundImage: `url(${imgBG2})`,
+  backgroundPosition: "center",
+  backgroundSize: "cover",
+  backgroundRepeat: "no-repeat",
+  width: "100vw",
+  height: "100vh",
+  position: "absolute",
+  top: 0,
+  left: 0,
+  zIndex: -1,
+  overflow: "hidden",
+};
+
+const Contact = () => {
+  return (
+    <>
+      <div style={imgStyle} />
+      <a
+        href="https://twitter.com/NowMoDesign/"
+        target="_blank"
+        rel="noopener noreferrer"
+        style={{
+          position: "absolute",
+          bottom: 40,
+          left: "4vw",
+          width: 50,
+          mixBlendMode: "difference",
+        }}
+      >
+        <Twitter />
+      </a>
+      <Credits />
+    </>
+  );
+};
+
+export default Contact;
